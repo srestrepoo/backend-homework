@@ -29,7 +29,7 @@ export class NotesController {
   }
   
   @Get(':username')
-  async findOne(@Param('username') username):Promise<Note[]> {
+  async find(@Param('username') username):Promise<Note[]> {
     return this.notesService.find(username);
   }
 
