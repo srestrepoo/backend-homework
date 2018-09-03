@@ -2,12 +2,14 @@ import { Controller, Get, Post, Body, Param, Patch, Delete } from '@nestjs/commo
 import { CreateUserDto } from './dto/create-user.dto';
 import { UsersService } from './users.service';
 import { User } from './interfaces/user.interface';
+import { ApiResponse} from '@nestjs/swagger';
 
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Post()
+  @ApiResponse({ status: 201, description: 'The user has been successfully created.'})
   async create(@Body() createUserDto: CreateUserDto) {
     this.usersService.create(createUserDto);
   }
