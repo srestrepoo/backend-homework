@@ -4,7 +4,7 @@ import { UsersService } from './users.service';
 import { User } from './interfaces/user.interface';
 import { ApiResponse} from '@nestjs/swagger';
 
-@Controller('api/v1/users')
+@Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
