@@ -2,12 +2,14 @@ import { Controller, Get, Post, Body, Param, Patch, Delete } from '@nestjs/commo
 import { CreateNoteDto } from './dto/create-note.dto';
 import { NotesService } from './notes.service';
 import { Note } from './interfaces/note.interface';
+import { ApiResponse} from '@nestjs/swagger';
 
 @Controller('notes')
 export class NotesController {
   constructor(private readonly notesService: NotesService) {}
 
   @Post()
+  @ApiResponse({ status: 201, description: 'The note has been successfully created.'})
   async create(@Body() createNoteDto: CreateNoteDto) {
     createNoteDto.createdDate = new Date();
     this.notesService.create(createNoteDto);
