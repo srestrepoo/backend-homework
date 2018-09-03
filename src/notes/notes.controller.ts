@@ -4,7 +4,7 @@ import { NotesService } from './notes.service';
 import { Note } from './interfaces/note.interface';
 import { ApiResponse} from '@nestjs/swagger';
 
-@Controller('notes')
+@Controller('api/v1/notes')
 export class NotesController {
   constructor(private readonly notesService: NotesService) {}
 
