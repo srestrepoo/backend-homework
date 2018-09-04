@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build:
-    ...
-  deploy:
     docker:
       - image: buildpack-deps:trusty
     steps:
@@ -12,6 +10,7 @@ jobs:
           command: |
             git push https://heroku:338cde33-a82b-4516-a658-84360300dacb@git.heroku.com/whispering-badlands-36382.git master
 
+    working_directory: ~/repo
 workflows:
   version: 2
   build-deploy:
