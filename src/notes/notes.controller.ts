@@ -16,12 +16,12 @@ export class NotesController {
   }
 
   @Patch(':id')
-  async update(@Param('id') id, @Body() updateNote) {
+  async update(@Param('id') id: string, @Body() updateNote) {
     this.notesService.update(id, updateNote);
   }
 
   @Delete(':id')
-  async delete(@Param('id') id) {
+  async delete(@Param('id') id: string) {
     this.notesService.delete(id);
   }
 
@@ -31,7 +31,7 @@ export class NotesController {
   }
   
   @Get(':username')
-  async find(@Param('username') username):Promise<Note[]> {
+  async find(@Param('username') username: string):Promise<Note[]> {
     return this.notesService.find(username);
   }
 
