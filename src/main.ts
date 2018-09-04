@@ -10,7 +10,7 @@ async function bootstrap() {
   .setTitle('Backend Homework OpenAPI by Santiago Restrepo & Miguel Pinzon')
   .setDescription('The users and notes API')
   .setVersion('1.0')
-  .setSchemes('http'||'https')
+  .setSchemes('https'||'http')
   .addTag('Users & Notes')
   .build();
 const document = SwaggerModule.createDocument(app, options);
