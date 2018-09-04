@@ -15,12 +15,12 @@ export class UsersController {
   }
 
   @Patch(':uname')
-  async update(@Param('uname') uname, @Body() updateUser) {
+  async update(@Param('uname') uname: string, @Body() updateUser) {
     this.usersService.update(uname, updateUser);
   }
 
   @Delete(':uname')
-  async delete(@Param('uname') uname) {
+  async delete(@Param('uname') uname: string) {
     this.usersService.delete(uname);
   }
 
@@ -30,7 +30,7 @@ export class UsersController {
   }
 
   @Get(':uname')
-  async findOne(@Param('uname') uname):Promise<User> {
+  async findOne(@Param('uname') uname: string):Promise<User> {
     return this.usersService.findOne(uname);
   }
 }
