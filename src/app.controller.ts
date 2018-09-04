@@ -6,6 +6,6 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
   @Get('')
   public healthCheck() {
-    return { message: 'Service is ok!' };
+    return { message: 'Service is ok!!' };
   }
 }
