@@ -15,7 +15,7 @@ describe('AppController', () => {
   describe('healthCheck', () => {
     it('should return {message: Service is ok}"', () => {
       const appController = app.get<AppController>(AppController);
-      const obj = { message: 'Service is ok' };
+      const obj = { message: 'Service is ok!' };
       expect(appController.healthCheck()).toEqual(obj);
     });
   });
