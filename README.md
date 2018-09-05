@@ -19,7 +19,7 @@ Delete - To delete a user or note
 Get - To see all users or notes or a certain one using the required argument
 
 ## Testing Coverage
-Visit: https://srestrepoo.github.io/backend-homework/docs/
+Visit: https://srestrepoo.github.io/backend-homework/
 
 # Continuos Deployment
 Each time you push to the repository on github, CircleCI deploys the app to Heroku with the new changes
