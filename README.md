@@ -22,5 +22,5 @@ Get - To see all users or notes or a certain one using the required argument
 Visit: https://srestrepoo.github.io/backend-homework/docs/
 
 # Continuos Deployment
-Each time you push to the repository on github, CircleCI deploy the app to Heroku with the new changes
+Each time you push to the repository on github, CircleCI deploys the app to Heroku with the new changes
 
